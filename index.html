@@ -1,0 +1,42 @@
+<!doctype html>
+
+<html lang='en'>
+  <head>
+    <meta charset='utf-8'>
+    <title>Birds</title>
+    <style>
+      .hide {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div>
+      <div id="div1" class="hide">
+        Div 1
+      </div>
+      <div id="div2" class="hide">
+        Div 2
+      </div>
+    </div>
+
+    <script>
+      const visits = localStorage.getItem('visits') || 0;
+      const visitsInt = parseInt(visits, 10);
+
+      const which = visitsInt % 2;
+
+      if (which) {
+        const element = document.getElementById('div1');
+        element.classList.remove('hide');
+      } else {
+        const element = document.getElementById('div2');
+        element.classList.remove('hide');
+      }
+
+      const incrementedVisits = visitsInt + 1;
+      localStorage.setItem('visits', incrementedVisits)
+    </script>
+  </body>
+</html>

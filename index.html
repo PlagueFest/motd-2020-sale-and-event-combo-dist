@@ -8,16 +8,31 @@
       .hide {
         display: none;
       }
+      .inline-block{display:inline-block}
+      .h-full{height:100%}
+      .h-screen{height:100vh}
+      .object-cover{-o-object-fit:cover;object-fit:cover}
+      .overflow-hidden{overflow:hidden}
     </style>
   </head>
 
   <body>
     <div>
       <div id="div1" class="hide">
-        Div 1
+        <div class="h-screen w-full overflow-hidden">
+            <a href="http://plaguefest.com/threads/may-9-2020-week-2-of-weekly-ze-events.22742/">
+            <video class="object-cover w-full h-full" src="ze-event.mp4" poster="ze-poster.jpg" type="video/mp4" width="1280" height="720" autoplay="true" loop="true" muted="true">
+            </video>
+            </a>
+        </div>
       </div>
       <div id="div2" class="hide">
-        Div 2
+        <div class="h-screen w-full overflow-hidden">
+          <a href="http://plaguefest.com/threads/covid-19-donator-sale.22722/">
+            <video class="object-cover w-full h-full" src="donator-sale.mp4" poster="donator-poster.jpg" type="video/mp4" width="1440" height="729" autoplay="true" loop="true" muted="true">
+            </video>
+          </a>
+        </div>
       </div>
     </div>
 
